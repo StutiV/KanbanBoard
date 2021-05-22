@@ -1,9 +1,12 @@
 import { FC } from "react";
 import { ColumnContainer, ColumnTitle } from "./styles";
 import { AddNewItem } from "./AddNewItem";
+import { useAppState } from "./state/AppStateContext";
+import { Card } from "./Card";
 
 type ColumnProps = {
   text: string
+  id: string
 };
 
 export const Column: FC<ColumnProps> = ({ text, children }) => {
