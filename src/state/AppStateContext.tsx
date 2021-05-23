@@ -32,21 +32,21 @@ const appData: AppState = {
         {
             id: "1",
             text: "In Progress",
-            tasks: [{ id: "c2", text: "Learn Typescript" }]
+            tasks: [{ id: "c2", text: "Learn TypeScript" }]
         },
         {
             id: "2",
             text: "Done",
             tasks: [{ id: "c3", text: "Begin to use static typing" }]
-        }
+        },
     ]
 };
 
 export const AppStateProvider: FC = ({ children }) => {
     const { lists } = appData;
-
+    
     const getTasksByListId = (id: string) => {
-        return lists.find((list) => list.id === id)?.tasks || [];
+        return lists.find((list) => list.id === id)?.tasks || []
     };
 
     return (
